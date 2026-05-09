@@ -1,0 +1,120 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-09 13:46:26.430487",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_lm7x",
+  "expense_claim",
+  "employee",
+  "column_break_fx6c",
+  "policy_applied",
+  "action_taken",
+  "violation_details_section",
+  "expense_type",
+  "expense_date",
+  "column_break_zvpu",
+  "claimed_amount",
+  "policy_limit",
+  "violation_message"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_lm7x",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "expense_claim",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Expense Claim",
+   "options": "Expense Claim",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_fx6c",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "policy_applied",
+   "fieldtype": "Data",
+   "label": "Policy Applied",
+   "options": "Expense Policy"
+  },
+  {
+   "fieldname": "action_taken",
+   "fieldtype": "Select",
+   "label": "Action Taken",
+   "options": "Warned\nBlocked"
+  },
+  {
+   "fieldname": "violation_details_section",
+   "fieldtype": "Section Break",
+   "label": "Violation Details"
+  },
+  {
+   "fieldname": "expense_type",
+   "fieldtype": "Link",
+   "label": "Expense Type",
+   "options": "Expense Claim Type"
+  },
+  {
+   "fieldname": "expense_date",
+   "fieldtype": "Data",
+   "label": "Expense Date"
+  },
+  {
+   "fieldname": "column_break_zvpu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "claimed_amount",
+   "fieldtype": "Currency",
+   "label": "Claimed Amount"
+  },
+  {
+   "fieldname": "policy_limit",
+   "fieldtype": "Currency",
+   "label": "Policy Limit"
+  },
+  {
+   "fieldname": "violation_message",
+   "fieldtype": "Text",
+   "label": "Violation Message"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-09 13:51:46.356519",
+ "modified_by": "Administrator",
+ "module": "Expense Guard",
+ "name": "Expense Violation Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

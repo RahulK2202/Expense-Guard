@@ -1,0 +1,75 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-09 13:34:25.465595",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1n1f",
+  "expense_type",
+  "max_amount",
+  "period",
+  "action",
+  "receipt_mandatory",
+  "rule_note"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1n1f",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "expense_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Expense Type",
+   "options": "Expense Claim Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "max_amount",
+   "fieldtype": "Currency",
+   "label": "Max Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "Per Claim\nPer Day"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Select",
+   "label": "Action",
+   "options": "Warn\nBlock"
+  },
+  {
+   "default": "0",
+   "fieldname": "receipt_mandatory",
+   "fieldtype": "Check",
+   "label": "Receipt Mandatory"
+  },
+  {
+   "fieldname": "rule_note",
+   "fieldtype": "Small Text",
+   "label": "Rule Note"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-05-09 13:36:50.425443",
+ "modified_by": "Administrator",
+ "module": "Expense Guard",
+ "name": "Expense Policy Rule",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
