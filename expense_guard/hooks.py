@@ -8,7 +8,7 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["hrms"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -145,6 +145,12 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+    "Expense Claim": {
+        "validate":  "expense_guard.expense_guard.policy_engine.validate_expense_claim",
+        "on_submit": "expense_guard.expense_guard.policy_engine.log_violations_on_submit",
+    }
+}
 
 # Scheduled Tasks
 # ---------------
@@ -166,6 +172,21 @@ app_license = "mit"
 # 		"expense_guard.tasks.monthly"
 # 	],
 # }
+# ── Scheduler ───────────────────────────────────────────
+scheduler_events = {
+    "monthly": [
+        "expense_guard.expense_guard.tasks.monthly_policy_violation_report",
+    ]
+}
+
+# ── Client Script ───────────────────────────────────────
+# Auto-loaded on Expense Claim form
+doctype_js = {
+    "Expense Claim": "public/js/expense_claim_policy.js",
+}
+
+# ── After Install ───────────────────────────────────────
+after_install = "expense_guard.expense_guard.install.after_install"
 
 # Testing
 # -------
